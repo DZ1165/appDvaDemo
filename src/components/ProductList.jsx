@@ -10,16 +10,18 @@ const ProductList = ({ onDelete, products }) => {
     title: 'Actions',
     render: (text, record) => {
       return (
-        <Popconfirm title="Delete?" onConfirm={() => onDelete(record.id)} >
+        <Popconfirm title="Delete?" onConfirm={() => onDelete(record.id)}>
           <Button>Delete</Button>
         </Popconfirm>
       );
     },
+  },{
   }];
   return (
     <Table
       dataSource={products}
       columns={columns}
+      rowKey={row=>row.id}
     />
   );
 };

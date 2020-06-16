@@ -1,22 +1,25 @@
 import React from 'react';
-
 import { connect } from 'dva';
 import ProductList from '../components/ProductList';
+import { Link } from "react-router-dom";
 
-
-const Products = ({dispatch,products}) => {
-  function handleDelete(id){
+const Products = ({ dispatch, products }) => {
+  function handleDelete(id) {
     dispatch({
-      type:'products/delete',
-      payload:id,
-    })
+      type: 'products/delete',
+      payload: id,
+    });
   }
   return (
     <div>
-    <h2>List Products</h2>
-    <ProductList onDelete={handleDelete} products={products} />
+      <h2>List of Products</h2>
+      <Link to="/"> 返回首页 </Link>
+      <ProductList onDelete={handleDelete} products={products} />
     </div>
-  )
+  );
 };
 
-export default connect(({products})=>({products})) (Products);
+// export default Products;
+export default connect(({ products }) => ({
+  products,
+}))(Products);
