@@ -17,6 +17,7 @@ const Products = ({ dispatch, products }) => {
       <ProductList onDelete={handleDelete} products={products} />
     </div>
   );
+  //git remote add origin git@github.com:DZ1165/appDvaDemo.git
 };
 
 // export default Products;
