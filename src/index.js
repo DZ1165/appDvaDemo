@@ -34,6 +34,7 @@ import './index.css';
 // app.use({});
 
 // 3. Model
+app.model(require('./models/example').default)
 app.model(require('./models/products').default);
 app.model(require('./models/mockjs').default);
 

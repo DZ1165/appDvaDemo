@@ -5,7 +5,7 @@
     "build": "roadhog build",
     "lint": "eslint --ext .js src test",
     "precommit": "npm run lint",
-    "mock":"json-server --watch ./mock/data/mock.js --routes ./mock/routes.json -p 8080"
+    "mock":"json-server --watch ./mock/index.js --routes ./mock/routes.json -p 8080"
   },
   "dependencies": {
     "antd": "^4.3.4",

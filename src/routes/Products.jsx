@@ -4,17 +4,22 @@ import ProductList from '../components/ProductList';
 import { Link } from "react-router-dom";
 
 const Products = ({ dispatch, products }) => {
+
+  // 
   function handleDelete(id) {
     dispatch({
       type: 'products/delete',
       payload: id,
     });
   }
+
   return (
     <div>
       <h2>List of Products</h2>
       <Link to="/"> 返回首页 </Link>
-      <ProductList onDelete={handleDelete} products={products} />
+      <ProductList 
+      onDelete={handleDelete} products={products} 
+      />
     </div>
   );
 };
